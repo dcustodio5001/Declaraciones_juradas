@@ -1,0 +1,6 @@
+*.pdf
+*.pdf:Zone.Identifier
+*.xlsx
+/dist/
+/build/
+*.spec
