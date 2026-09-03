@@ -72,7 +72,7 @@ class App(Tk):
                 
                 field_values = {
                     'Certificate_Number' : row['Certificate_Number'],
-                    'Address' : row['Address'],
+                    'Address' : 'Avenida Reforma 7-62 zona 9 Edificio Aristos Reforma, oficina 901, Ciudad de Guatemala', #row['Address'],
                     'Day' : row['Day'],
                     'Month' : row['Month'],
                     'Year' : row['Year'],
@@ -104,7 +104,7 @@ class App(Tk):
                     'Limiter_Model'  : row['Limiter_Model'],
                     'Limiter_Type'   : row['Limiter_Type'],
                     'Limiter_Maintenance' : row['Limiter_Maintenance'],
-                    'Company_Register'    : 'STCPC-SLV-0004-2021',
+                    'Company_PROVIAL_Register'    : 'STCPC-SLV-0004-2021',
                     'Company_Name'        : 'GPS Tecnología S.A.',
                     'Company_Register'    : '708711',
                     'Company_Folio'  : '927',
@@ -124,7 +124,7 @@ class App(Tk):
                     'Declaration_Month' : row['Month'],
                     'Declaration_Year'  : '2026',
                     'Declaration_Hour'  : current_time.strftime("%H:%M"),
-                    'Declaration_Rep_Name'  :  'JOSÉ MANUEL TOBAR SOLARES',
+                    'Declaration_Rep_Name'  :  'José Manuel Tobar Solares',
                     'Declaration_Rep_Relation' : 'Representante legal',
                     'Declaration_Company_Name' : 'GPS Tecnología S.A.',
                     'Declaration_Company_Address' : 'vía 4, 1-30 zona 4, Campus Tec 1 oficina 304, Ciudad de Guatemala',
@@ -138,7 +138,7 @@ class App(Tk):
                     
                 with open(f"{ruta}/Declaracion_Jurada_{row['Vehicle_Plate']}.pdf", "wb") as o:
                     Writer.write(o)
-            
+                    
                 current_time += datetime.timedelta(minutes=3)
             
             ms.showinfo('Información', "Se crearon las declaraciones juradas correctamente.")
